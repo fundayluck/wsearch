@@ -3,6 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { SearchBarComponent } from './search-bar/search-bar.component';
 import { PageListComponent } from './page-list/page-list.component';
 import { WikipediaService } from './wikipedia.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
