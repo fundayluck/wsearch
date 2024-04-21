@@ -12,4 +12,8 @@ import { PageListComponent } from './page-list/page-list.component';
 })
 export class AppComponent {
   title = 'wsearch';
+
+  onTerm(term: string) {
+    console.log('I am the app comps and here is the term => ', term);
+  }
 }
