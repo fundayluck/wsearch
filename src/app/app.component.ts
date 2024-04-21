@@ -1,9 +1,7 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { SearchBarComponent } from './search-bar/search-bar.component';
 import { PageListComponent } from './page-list/page-list.component';
 import { WikipediaService } from './wikipedia.service';
-import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -18,7 +16,8 @@ export class AppComponent {
   constructor(private wikipedia: WikipediaService) {}
 
   onTerm(term: string) {
-    const result = this.wikipedia.search(term);
-    console.log(result);
+    this.wikipedia.search(term).subscribe((res) => {
+      console.log(res);
+    });
   }
 }
